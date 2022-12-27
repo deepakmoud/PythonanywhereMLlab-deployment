@@ -42,7 +42,14 @@ pathforelbowplot = "kmeans/plot"
 #app.config['LR1VAR'] = pathforonevarLR
 app.config['elbowplot'] = pathforelbowplot
 #print(app.config['elbowplot'])
-
+@app.route('/git_update', methods=['POST'])
+def git_update():
+    repo = git.Repo('./orbe')
+    origin = repo.remotes.origin
+    repo.create_head('main',
+                     origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
+    origin.pull()
+    return '', 200
 # for index page
 #------------------------------ Launcing undex page-------------------------------------------
 @app.route('/')
