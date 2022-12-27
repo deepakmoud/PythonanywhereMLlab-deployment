@@ -18,7 +18,7 @@ import pandas as pd
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
-
+import git
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
