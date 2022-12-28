@@ -1,2 +1,2 @@
 # ml-product
-Created by Pritesh Kumar and Dikshant Mali
+Created by Deepak Moud
